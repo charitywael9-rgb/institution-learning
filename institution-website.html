@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution of Learning | Master Skills in 90 Days</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="w3.org">
+                    <path d="M12 3L1 9L12 15L21 10V17H23V9L12 3Z" fill="#2563eb"/>
+                    <path d="M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z" fill="#1d4ed8"/>
+                </svg>
+                <span>Institution of Learning</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#core-pillars">Pillars</a>
+                <a href="#quiz-section">Assess Skills</a>
+                <a href="#lessons">Lessons</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#schedule">Book Class</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Integrated Quiz -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="badge">90-Day Mastery Guarantee</div>
+                <h1>Learning for everyone, creating opportunities for a <span class="highlight">new you</span>.</h1>
+                <p class="subtitle">Master the skills in 90 days. Learn from industry experts, connect with native speakers, build real skills, and boost your future.</p>
+                <p class="question">Are you ready to discover what you are capable of?</p>
+                <div class="hero-actions">
+                    <a href="#schedule" class="btn-primary">Book Free Live Class</a>
+                    <a href="#quiz-section" class="btn-secondary">Take Assessment Quiz</a>
+                </div>
+            </div>
+            
+            <!-- Quiz Card -->
+            <div id="quiz-section" class="quiz-card">
+                <h3>Quick Skill Assessment</h3>
+                <p>Find your optimal 90-day learning path instantly.</p>
+                <div id="quiz-body">
+                    <div class="quiz-question" id="q1">
+                        <p class="q-title">1. What is your primary learning goal?</p>
+                        <button class="quiz-option" onclick="nextQuestion(1, 'career')">Advance my career</button>
+                        <button class="quiz-option" onclick="nextQuestion(1, 'travel')">Travel & connect with natives</button>
+                        <button class="quiz-option" onclick="nextQuestion(1, 'academic')">Pass academic exams</button>
+                    </div>
+                    <div class="quiz-question hidden" id="q2">
+                        <p class="q-title">2. How much time can you practice daily?</p>
+                        <button class="quiz-option" onclick="nextQuestion(2, 'light')">15 to 30 minutes</button>
+                        <button class="quiz-option" onclick="nextQuestion(2, 'intensive')">1 hour or more</button>
+                    </div>
+                    <div class="quiz-question hidden" id="q3">
+                        <p class="q-title">3. Which skill feels the most challenging?</p>
+                        <button class="quiz-option" onclick="showResults('speaking')">Speaking confidently</button>
+                        <button class="quiz-option" onclick="showResults('listening')">Understanding native speakers</button>
+                        <button class="quiz-option" onclick="showResults('writing')">Writing & reading grammar</button>
+                    </div>
+                    <div id="quiz-result" class="hidden">
+                        <h4>Your Path: <span id="path-name" class="highlight">Analyzing...</span></h4>
+                        <p id="path-desc">We are matching your profile with our curriculum matrices.</p>
+                        <a href="#schedule" class="btn-primary" style="display:block; text-align:center; margin-top:1rem;">Lock In This Path</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Pillars Section -->
+    <section id="core-pillars" class="pillars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Learning Methodology</h2>
+                <p>Immersive structures curated by elite educators to fast-track your fluency.</p>
+            </div>
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <div class="image-wrapper"><img src="unsplash.com" alt="Speaking"></div>
+                    <div class="pillar-content">
+                        <span class="tag">Active Expression</span>
+                        <h3>Speaking</h3>
+                        <p class="quote">"Don't just study it, live it, speak it."</p>
+                        <p>Speak your mind and find your voice in a new language. Remember, English is a bridge to everywhere.</p>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="image-wrapper"><img src="unsplash.com" alt="Listening"></div>
+                    <div class="pillar-content">
+                        <span class="tag">Audio Comprehension</span>
+                        <h3>Listening</h3>
+                        <p class="quote">"Hear it, get it, speak it."</p>
+                        <p>Listen close to learn fast. Train your ear to recognize nuances directly from native speech patterns.</p>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="image-wrapper"><img src="unsplash.com" alt="Reading & Writing"></div>
+                    <div class="pillar-content">
+                        <span class="tag">Literacy & Composition</span>
+                        <h3>Reading & Writing</h3>
+                        <p class="quote">"Read to lead and write it down to make it real."</p>
+                        <p>Develop critical analysis and professional articulation through structured textual composition modules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Online Lessons Feature -->
+    <section id="lessons" class="lessons-feature">
+        <div class="container feature-grid">
+            <div class="feature-image">
+                <img src="unsplash.com" alt="Online classroom interface">
+            </div>
+            <div class="feature-text">
+                <h2>Premium Online Lessons</h2>
+                <p>Lessons led by experienced teachers make even complex topics more accessible and engaging. It's an investment in the future and a solid step toward a deeper understanding of the world of English.</p>
+                <ul class="feature-list">
+                    <li>✓ 1-on-1 Mentorship from Certified Experts</li>
+                    <li>✓ Dynamic Classrooms & Live Interactive Labs</li>
+                    <li>✓ Customized 90-Day Training Milestone Matrix</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Page Package Grid -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent 90-Day Pricing Plans</h2>
+                <p>Invest in your global capabilities with flexible packages designed for any routine.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="price-card">
+                    <h3>Essential Immersive</h3>
+                    <div class="price">$199<span>/total</span></div>
+                    <p class="price-desc">Perfect for foundational conversational fluency.</p>
+                    <ul class="price-features">
+                        <li>✓ Access to core Speaking & Listening units</li>
+                        <li>✓ 2 Live group workshops weekly</li>
+                        <li>✓ 90-day progress metrics tracking</li>
+                    </ul>
+                    <a href="#schedule" class="btn-secondary price-btn" onclick="selectPlan('Essential Immersive')">Select Essential</a>
+                </div>
+                <!-- Plan 2 (Popular) -->
+                <div class="price-card popular">
+                    <div class="pop-badge">Most Popular</div>
+                    <h3>Pro Fluency Acceleration</h3>
+                    <div class="price">$349<span>/total</span></div>
+                    <p class="price-desc">Complete language mastery including writing paths.</p>
+                    <ul class="price-features">
+                        <li><strong>✓ Everything in Essential Plan</strong></li>
+                        <li>✓ Unlimited Native Speaker conversations</li>
+                        <li>✓ 1-on-1 Dedicated teacher mentorship</li>
+                        <li>✓ Reading & Writing masterclass access</li>
+                    </ul>
+                    <a href="#schedule" class="btn-primary price-btn" onclick="selectPlan('Pro Fluency Acceleration')">Select Premium Pro</a>
+                </div>
+                <!-- Plan 3 -->
+                <div class="price-card">
+                    <h3>Enterprise Executive</h3>
+                    <div class="price">$599<span>/total</span></div>
+                    <p class="price-desc">Exclusive alignment for career and industry tasks.</p>
+                    <ul class="price-features">
+                        <li><strong>✓ Everything in Premium Pro Plan</strong></li>
+                        <li>✓ Tailored business articulation coaching</li>
+                        <li>✓ Flexible live booking 24/7 priority control</li>
+                        <li>✓ Official Institutional Certification</li>
+                    </ul>
+                    <a href="#schedule" class="btn-secondary price-btn" onclick="selectPlan('Enterprise Executive')">Select Executive</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduling Calendar Form Section with Integrated Email Logic -->
+    <section id="schedule" class="scheduling-section">
+        <div class="container form-max-width">
+            <div class="section-header">
+                <h2>Schedule Your Trial Class</h2>
+                <p>Pick a real-time slot to connect live with our premium native instructors.</p>
+            </div>
+            <form class="booking-form" onsubmit="handleBooking(event)">
+                <div class="form-group">
+                    <label for="student-name">Full Name</label>
+                    <input type="text" id="student-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-email">Email Address</label>
+                    <input type="email" id="student-email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="selected-package">Selected Package Strategy</label>
+                    <input type="text" id="selected-package" value="None selected (Click a plan above or type here)" placeholder="Ex: Pro Fluency Acceleration">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="class-date">Select Date</label>
+                        <input type="date" id="class-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="class-time">Select Preferred Time</label>
+                        <select id="class-time" required>
+                            <option value="">Choose a slot...</option>
+                            <option value="09:00 AM">09:00 AM (Native Session)</option>
+                            <option value="02:00 PM">02:00 PM (Expert Workshop)</option>
+                            <option value="06:00 PM">06:00 PM (Immersive Speaking)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary form-submit-btn">Secure My 90-Day Slot & Submit</button>
+                <p id="form-success" class="success-msg hidden">✓ Booking registered! Launching mail system notification confirmation draft...</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Global Community Says</h2>
+                <p>Real feedback from students who transformed their futures in 90 days.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The speaking module changed everything for me. I stopped memorizing rules and actually started living the language. Landing my tech job abroad was only possible due to this 90-day shift!"</p>
+                    <div class="user-info"><strong>Elena R.</strong><span>Software Engineer</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The live online lessons are brilliant. The experienced instructors broke down intricate grammar metrics effortlessly. Truly a premium investment into my global business communications."</p>
+                    <div class="user-info"><strong>Marcus T.</strong><span>Marketing Director</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Hearing native speakers while engaging in the reading paths forced accelerated growth. 'Read to lead' became my daily routine. Highly recommend this learning center!"</p>
+                    <div class="user-info"><strong>Aisha M.</strong><span>University Student</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Institution of Learning. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Controllers -->
+    <script>
+        function nextQuestion(currentNum, choice) {
+            document.getElementById('q' + currentNum).classList.add('hidden');
+            document.getElementById('q' + (currentNum + 1)).classList.remove('hidden');
+        }
+
+        function showResults(focusArea) {
+            document.getElementById('q3').classList.add('hidden');
+            const pathName = document.getElementById('path-name');
+            const pathDesc = document.getElementById('path-desc');
+            document.getElementById('quiz-result').classList.remove('hidden');
+
+            if(focusArea === 'speaking') {
+                pathName.innerText = "Immersive Speaking Accelerated Path";
+                pathDesc.innerText = "Focuses heavily on live interactions with native speakers to clear language barriers within 90 days.";
+            } else if(focusArea === 'listening') {
+                pathName.innerText = "Acoustic Comprehension Specialization";
+                pathDesc.innerText = "Designed to tune your listening habits via advanced interactive context mapping tools.";
+            } else {
+                pathName.innerText = "Professional Literary Alignment";
+                pathDesc.innerText = "Tailored specifically around writing mechanics, helping you lead, compile documentation, and read with precision.";
+            }
+        }
+
+        function selectPlan(planName) {
+            document.getElementById('selected-package').value = planName;
+        }
+
+        // JavaScript Email Notification Logic 
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            // Extract raw data fields from inputs
+            const name = document.getElementById('student-name').value;
+            const email = document.getElementById('student-email').value;
+            const targetPackage = document.getElementById('selected-package').value;
+            const date = document.getElementById('class-date').value;
+            const time = document.getElementById('class-time').value;
+
+            // Display functional success text window layer
+            document.getElementById('form-success').classList.remove('hidden');
+
+            // Format standard structured mail links
+            const registrationRecipient = "admissions@institutionoflearning.com"; 
+            const mailSubject = encodeURIComponent("New Student Live Lesson Registration - " + name);
+            const mailBody = encodeURIComponent(
+                "Hello Admissions Team,\n\n" +
+                "A new 90-day trajectory student has registered via the landing page portal:\n\n" +
+                "Student Name: " + name + "\n" +
+                "Student Email: " + email + "\n" +
+                "Targeted Selection: " + targetPackage + "\n" +
+                "Requested Schedule: " + date + " at " + time + "\n\n" +
+                "Please log this into the system roster grid and send their onboarding credentials.\n\n" +
+                "Regards,\n" +
+                "Institution of Learning Automated Core"
+            );
+
+            // Trigger device native email client routing via simulated programmatic clicking window process
+            window.location.href = `mailto:${registrationRecipient}?subject=${mailSubject}&body=${mailBody}`;
+            
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
